@@ -1,0 +1,5 @@
+Inside of the BjortFX folder is a little file called 'BjortFX_config'.
+This is all you need to get the shader looking just the way you want!
+
+Asset page & information:
+https://trixelized.itch.io/bjortfx
