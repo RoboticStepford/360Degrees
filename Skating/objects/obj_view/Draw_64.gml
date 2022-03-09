@@ -17,6 +17,8 @@ else if global.song = mus_Demisurgex_Its_Dark_Outside {artistname = "DemisurgeX"
 else if global.song = mus_Dryest_Grinding {artistname = "Dryest"; songname = "Grinding"; artistspr = spr_dryest;}
 else if global.song = mus_MistaJub_Dogboard {artistname = "MistaJub"; songname = "DogBoard"; artistspr = spr_mistajub;}
 else if global.song = mus_Post_Elvis_Rock_The_Third_Eye {artistname = "Post Elvis"; songname = "Rock The Third Eye"; artistspr = spr_postelvis;}
+else if global.song = mus_CarpetBakery_Radical_Ride {artistname = "CarpetBakery"; songname = "Radical Ride"; artistspr = spr_carpetbakery;}
+else if global.song = mus_DreamEnder_Number_3 {artistname = "DreamEnder"; songname = "Number 3"; artistspr = spr_dreamender;}
 else {artistname = "BE PATIENT..."; songname = "LOADING"; artistspr = spr_disc;}
 
 //DRAW TOTAL SCORE

@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_Post_Elvis_Rock_The_Third_Eye.mp3",
-  "duration": 117.498779,
+  "duration": 219.611435,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"mus_DreamEnder_Number_3","path":"sounds/mus_DreamEnder_Number_3/mus_DreamEnder_Number_3.yy",},"order":16,},
     {"id":{"name":"post_elvis_1","path":"sprites/post_elvis_1/post_elvis_1.yy",},"order":66,},
     {"id":{"name":"spr_trick5","path":"sprites/spr_trick5/spr_trick5.yy",},"order":10,},
     {"id":{"name":"Dylz492","path":"sprites/Dylz492/Dylz492.yy",},"order":5,},
@@ -35,6 +36,7 @@
     {"id":{"name":"snd_skateboarddespawn","path":"sounds/snd_skateboarddespawn/snd_skateboarddespawn.yy",},"order":5,},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},"order":1,},
     {"id":{"name":"kolani","path":"sprites/kolani/kolani.yy",},"order":59,},
+    {"id":{"name":"spr_dreamender","path":"sprites/spr_dreamender/spr_dreamender.yy",},"order":12,},
     {"id":{"name":"bingowaders","path":"sprites/bingowaders/bingowaders.yy",},"order":3,},
     {"id":{"name":"GMLive_seekSetOp","path":"scripts/GMLive_seekSetOp/GMLive_seekSetOp.yy",},"order":6,},
     {"id":{"name":"spr_default_player","path":"sprites/spr_default_player/spr_default_player.yy",},"order":0,},
@@ -142,6 +144,7 @@
     {"id":{"name":"mzza2","path":"sprites/mzza2/mzza2.yy",},"order":13,},
     {"id":{"name":"obj_rail_floating","path":"objects/obj_rail_floating/obj_rail_floating.yy",},"order":5,},
     {"id":{"name":"fnt_thaleah","path":"fonts/fnt_thaleah/fnt_thaleah.yy",},"order":5,},
+    {"id":{"name":"mus_CarpetBakery_Radical_Ride","path":"sounds/mus_CarpetBakery_Radical_Ride/mus_CarpetBakery_Radical_Ride.yy",},"order":15,},
     {"id":{"name":"AllowDataURI","path":"extensions/AllowDataURI/AllowDataURI.yy",},"order":3,},
     {"id":{"name":"pollenpvtch","path":"sprites/pollenpvtch/pollenpvtch.yy",},"order":41,},
     {"id":{"name":"GMLive_vm_init","path":"scripts/GMLive_vm_init/GMLive_vm_init.yy",},"order":7,},
@@ -187,6 +190,7 @@
     {"id":{"name":"spr_valbun","path":"sprites/spr_valbun/spr_valbun.yy",},"order":4,},
     {"id":{"name":"drawingslowly","path":"sprites/drawingslowly/drawingslowly.yy",},"order":55,},
     {"id":{"name":"mus_Jacob_Hyperventilation","path":"sounds/mus_Jacob_Hyperventilation/mus_Jacob_Hyperventilation.yy",},"order":4,},
+    {"id":{"name":"spr_carpetbakery","path":"sprites/spr_carpetbakery/spr_carpetbakery.yy",},"order":11,},
     {"id":{"name":"spr_timer","path":"sprites/spr_timer/spr_timer.yy",},"order":0,},
     {"id":{"name":"GMLive_http","path":"scripts/GMLive_http/GMLive_http.yy",},"order":0,},
     {"id":{"name":"fnt_cambria","path":"fonts/fnt_cambria/fnt_cambria.yy",},"order":1,},
