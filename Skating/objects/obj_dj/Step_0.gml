@@ -9,7 +9,7 @@ if clicked = true
 	{
 		if !audio_is_playing(oldsong)
 		{
-			picksong();
+			if forceplay = 1 {picksong();}else{forceplay = 1; global.song = mus_Post_Elvis_Rock_The_Third_Eye;}
 			waited = true;	
 			alarm[0] = 4*60;
 		}

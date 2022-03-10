@@ -11,7 +11,7 @@ else
 }
 
 //use this to define stuff that should only happen during dev
-globalvar debug; debug = true;
+globalvar debug; debug = false;
 
 //set the resolution of the game
 globalvar screenw; screenw = 480;
@@ -32,11 +32,24 @@ sndvol = 0.6;
 
 global.timeminute = 2;
 global.timesecond = 0;
-
 global.points = 0;
 global.combo = 0;
 global.cscore = 0;
 global.combostring = "";
+
+global.doCRT = true;
+global.doWobbly = true;
+global.doMouse = false;
+global.doScreenshake = true;
+
+ini_open("save.ini");
+global.doCRT = ini_read_real("option","CRT",1);
+global.doWobbly = ini_read_real("option","WOBBLY",1);
+global.doMouse = ini_read_real("option","MOUSE",0);
+global.doScreenshake = ini_read_real("option","SCREENSHAKE",1);
+musvol = ini_read_real("option","MUSIC",0.4);
+sndvol = ini_read_real("option","SOUND",0.6);
+ini_close();
 
 //CREATE OBJECTS
 if !instance_exists(obj_dj) {instance_create_layer(0,0,"Overlay",obj_dj);}

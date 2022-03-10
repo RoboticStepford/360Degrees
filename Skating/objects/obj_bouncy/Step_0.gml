@@ -1,7 +1,7 @@
 /// @description 
 if live_enabled {if (live_call()) return live_result;}
 
-if instance_place(x,y,obj_player) and image_speed = 0
+if instance_place(x,y,obj_player) and image_speed = 0 and obj_player.slowdown = false
 {
 	obj_player.vsp = -20;
 	image_speed = 0.9;

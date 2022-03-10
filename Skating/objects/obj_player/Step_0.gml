@@ -144,7 +144,7 @@ if canjump = true and alive = true
 			
 		trick = 0;
 		canlandupside = true;
-		vsp = vsp_jump; 
+		vsp += vsp_jump; 
 		playsnd(snd_skateboardjump,10,random_range(0.8,1.2),false,1);
 		addtrick(1,1,0,false,"OLLIE",true);
 	}
@@ -176,23 +176,22 @@ if (place_meeting(x+hsp,y,obj_wall))
 x = x + hsp;
 
 //CHECK FOR VERTICAL GRINDING
-if vsp > 0 and alive = true and slowdown = false and (place_meeting(x,y+vsp,obj_rail)) and (!place_meeting(x,y+vsp,obj_railstop))
+if vsp >= 0 and alive = true and slowdown = false and (place_meeting(x,y+vsp,obj_rail)) and (!place_meeting(x,y+vsp,obj_railstop))
 {
 	railben = instance_place(x,y+vsp,obj_rail);
 	if railben = noone {railben = obj_nothing; railbenang = 0;}
-		
+
 	if instance_exists(railben)
 	{
 		//GET THE ANGLE OF THE RAIL
 		railbenang = railben.image_angle;
-			
 		//GOING UP
-		y += lengthdir_y(railben.image_angle/6,railben.image_angle);
-		//move as close as we can
-		while (!place_meeting(x,y+1,obj_rail))
-		{
-			y = y + 1;
-		}
+		if railben.image_angle != 0 {y += lengthdir_y(railben.image_angle/6,railben.image_angle);}
+	}
+	//move as close as we can
+	while (!place_meeting(x,y+1,obj_rail))
+	{
+		y = y + 1;
 	}
 	
 	//STACKING ON THE RAIL
@@ -205,11 +204,23 @@ if vsp > 0 and alive = true and slowdown = false and (place_meeting(x,y+vsp,obj_
 	}
 		
 	//GRINDING
-	if grinding = false {playsnd(snd_jumponmetal,1,1,false,0.25); addtrick(1,1,1,true,"GRIND",true);}
+	if grinding = false and grindcd = 0 {
+		playsnd(snd_jumponmetal,1,1,false,0.25); 
+		if trick = 0 {addtrick(1,10,1,true,"50-50 GRIND",true);}
+		if trick = 1 {addtrick(1,20,1,true,"ONE FOOTED GRIND",true);}
+		if trick = 2 {addtrick(1,30,1,true,"DARKSIDE GRIND",true);}
+		if trick = 3 {addtrick(1,40,1,true,"ASSUMED GRIND",true);}
+		if trick = 4 {addtrick(1,50,1,true,"HANDSTAND RAILRIDE GRIND",true);}
+		if trick = 5 {addtrick(1,60,1,true,"SLACKIN OFF GRIND",true);}
+		grindcd = 1;
+	}
+	grindcd = approach(grindcd,0,0.25);
+	
 	grinding = true;
-	global.cscore += global.repeatadd;	
+	
 	if grinding = true
 	{
+		global.cscore += global.repeatadd;
 		objCRT.crtDistortion = approach(objCRT.crtDistortion,0.5,0.01);
 		screenshake(1,1);
 		vsp = 0;

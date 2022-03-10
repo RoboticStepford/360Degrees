@@ -6,7 +6,7 @@ if (instance_number(obj_gmlive) > 1) {
 }
 
 // flip this value to 0 to disable GMLive!
-#macro live_enabled 0 
+#macro live_enabled 1 
 
 
 

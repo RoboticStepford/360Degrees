@@ -5,3 +5,5 @@ scale = 0.5;
 play = 0;
 objCRT.crtDistortion = -0.5;
 bounce = false;
+alarm[0] = 1*60;
+alarm[1] = 8*60;

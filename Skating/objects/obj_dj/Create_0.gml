@@ -12,3 +12,5 @@ global.song = mus_silence;
 global.vol = 1;
 global.maxvol = 1;
 oldsong = mus_silence;
+
+forceplay = 0;

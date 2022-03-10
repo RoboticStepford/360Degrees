@@ -17,6 +17,15 @@ manualdif = 1;
 zrotation = 1;
 zrotmod = 1;
 
+popuptimer = 0;
+popuptext = "";
+popblend = c_white;
+
+alarm[1] = 60;
+
+tutphase = 0;
+tuttext = "";
+
 xscale = 1;
 yscale = 1;
 ymod = 0;
@@ -33,6 +42,7 @@ manmod = 0
 many = 0
 indscale = 0;
 grindmod = 0;
+grindcd = 0;
 
 deathrange = 20;
 manualrange = 60;

@@ -24,6 +24,7 @@ if speed > 0.25
 	//BOUNCE
 	if bounce = true
 	{
+		//if play = 1 {}
 		bounce = false;
 		speed = speed/2; 
 		scale = 0.5;
@@ -37,15 +38,14 @@ if speed > 0.25
 			puff.fdspd = 0.02;
 			puff.sprite_index = spr_spark;
 			puff.ang = 1;}
-			screenshake(3,1); 
+			//screenshake(3,1); 
 			playsnd(snd_hitfloor,0,random_range(0.9,1.1),false,1);
-			objCRT.crtDistortion = -0.8;
+			//objCRT.crtDistortion = -0.8;
 		}	
 	}
 }
 else
 {
-	if gravity != 0 and play = 1 {alarm[0] = 60;}
 	speed = 0;
 	gravity = 0;
 	direction = 0;
