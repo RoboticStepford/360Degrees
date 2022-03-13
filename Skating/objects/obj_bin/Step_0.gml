@@ -9,6 +9,7 @@ if distance_to_object(obj_player) < 2
 	
 	
 	instance_destroy();
+	playsnd(snd_trashcan,1,random_range(0.9,1.1),false,0.4);
 	
 	if global.trash < global.maxtrash
 	{
@@ -23,5 +24,6 @@ if distance_to_object(obj_player) < 2
 		obj_player.popuptimer = 120;
 		obj_player.popblend = c_lime;
 		obj_player.popuptext = "GOAL COMPLETE: BIN TIPPER!!!";
+		global.goals += 1;
 	}	
 }

@@ -1,7 +1,7 @@
 /// @description GUI
 if live_enabled {if (live_call()) return live_result;}
 
-if global.inbrowser = false {sc = 1; scwid = 480; schit = 270;}else{sc = 3; scwid = 480*3; schit = 270*3;}
+if global.inbrowser = false or global.doCRT = false {sc = 1; scwid = 480; schit = 270;}else{sc = 3; scwid = 480*3; schit = 270*3;}
 
 if global.song = mus_CassieBee_SK8_ZSIX4 {artistname = "CassieBee"; songname = "SK8 ZSIX4"; artistspr = spr_cassiebee;}
 else if global.song = mus_Packtion_Bread_Trap {artistname = "Packtion"; songname = "Bread Trap"; artistspr = spr_packtion;}
@@ -19,6 +19,10 @@ else if global.song = mus_MistaJub_Dogboard {artistname = "MistaJub"; songname =
 else if global.song = mus_Post_Elvis_Rock_The_Third_Eye {artistname = "Post Elvis"; songname = "Rock The Third Eye"; artistspr = spr_postelvis;}
 else if global.song = mus_CarpetBakery_Radical_Ride {artistname = "CarpetBakery"; songname = "Radical Ride"; artistspr = spr_carpetbakery;}
 else if global.song = mus_DreamEnder_Number_3 {artistname = "DreamEnder"; songname = "Number 3"; artistspr = spr_dreamender;}
+else if global.song = mus_heyopc_full_circle {artistname = "heyopc, maxxjamez"; songname = "full circle"; artistspr = spr_heyopc;}
+else if global.song = mus_heyopc_edm_sac {artistname = "heyopc, maxxjamez"; songname = "JUMP"; artistspr = spr_heyopc;}
+else if global.song = mus_Crashtroid__Fat_Boy {artistname = "Crashtroid"; songname = "Fat Boy"; artistspr = spr_crashtroid;}
+else if global.song = mus_conundrym_short_n_sweet_revised {artistname = "Conundrym"; songname = "Short N Sweet"; artistspr = spr_conundrym;}
 else {artistname = "BE PATIENT..."; songname = "LOADING"; artistspr = spr_disc;}
 
 

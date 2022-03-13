@@ -21,6 +21,8 @@ if obj_360degrees.done = true
 			if sprite_index = spr_hitdastreets {ftr.rm = rm_test; picksong();}
 			if sprite_index = spr_howtoplay {ftr.rm = rm_tutorial;}
 			if sprite_index = spr_options {ftr.rm = rm_options;}
+			
+			if audio_is_playing(snd_360deg) {audio_stop_sound(snd_360deg)}
 		}
 	}
 	else

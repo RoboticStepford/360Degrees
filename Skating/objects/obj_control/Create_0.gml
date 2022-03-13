@@ -25,6 +25,9 @@ global.tape = 0;
 global.maxtape = 1;
 global.trash = 0;
 global.maxtrash = 10;
+global.valve = 0;
+global.maxvalve = 3;
+global.goals = 0;
 
 
 //x = room_width/2;

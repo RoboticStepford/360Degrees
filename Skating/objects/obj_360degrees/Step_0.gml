@@ -1,7 +1,11 @@
 /// @description 
 if live_enabled {if (live_call()) return live_result;}
+
+
 if x < room_width/2
 {
+	//if mouse_check_button_pressed(mb_left) {x = room_width/2;}
+	
 	if move = 0
 	{
 		if mouse_check_button_pressed(mb_left) {move = 1;}	

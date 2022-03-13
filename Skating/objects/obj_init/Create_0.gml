@@ -1,6 +1,5 @@
 randomize();
 
-
 if os_browser == browser_not_a_browser
 {
 	global.inbrowser = false;
@@ -26,9 +25,9 @@ global.scorescale = 1;
 
 //set volume of the game sounds
 globalvar musvol;
-musvol = 0.4;
+musvol = 0.3;
 globalvar sndvol;
-sndvol = 0.6;
+sndvol = 0.4;
 
 global.timeminute = 2;
 global.timesecond = 0;
@@ -41,19 +40,24 @@ global.doCRT = true;
 global.doWobbly = true;
 global.doMouse = false;
 global.doScreenshake = true;
+global.highscore = 0;
 
 ini_open("save.ini");
-global.doCRT = ini_read_real("option","CRT",1);
-global.doWobbly = ini_read_real("option","WOBBLY",1);
-global.doMouse = ini_read_real("option","MOUSE",0);
-global.doScreenshake = ini_read_real("option","SCREENSHAKE",1);
-musvol = ini_read_real("option","MUSIC",0.4);
-sndvol = ini_read_real("option","SOUND",0.6);
+	global.doCRT = ini_read_real("option","CRT",1);
+	global.doWobbly = ini_read_real("option","WOBBLY",1);
+	global.doMouse = ini_read_real("option","MOUSE",0);
+	global.doScreenshake = ini_read_real("option","SCREENSHAKE",1);
+	musvol = ini_read_real("option","MUSIC",0.4);
+	sndvol = ini_read_real("option","SOUND",0.6);
+	global.highscore = ini_read_real("option","highscore",0);
 ini_close();
 
 //CREATE OBJECTS
 if !instance_exists(obj_dj) {instance_create_layer(0,0,"Overlay",obj_dj);}
 if !instance_exists(obj_mouse) {instance_create_layer(0,0,"Overlay",obj_mouse);}
 if !instance_exists(objCRT) {instance_create_layer(0,0,"World",objCRT);}
+if !instance_exists(obj_ng) {instance_create_layer(0,0,"World",obj_ng);}
+
+
 
 alarm[0] = 1;

@@ -26,6 +26,8 @@ alarm[1] = 60;
 tutphase = 0;
 tuttext = "";
 
+fadeout = false;
+
 xscale = 1;
 yscale = 1;
 ymod = 0;
@@ -58,3 +60,5 @@ trickangle = 0;
 kickfliphit = obj_nothing;
 
 instance_create_depth(x,y,-999,obj_respawnpoint);
+
+alarm[3] = ((room_speed*60)*3)

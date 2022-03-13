@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_Predator_Sk8ing_Pussy.mp3",
-  "duration": 88.137146,
+  "duration": 88.13712,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

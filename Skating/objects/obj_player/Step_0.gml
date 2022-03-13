@@ -12,10 +12,11 @@ if alive = 1
 		key_hold = 0;
 		hsp_walk = approach(hsp_walk,0,0.1);
 		image_speed = approach(image_speed,0,0.05);
+
 	}
 	else
 	{
-		if global.timesecond = 0 and global.timeminute = 0 and global.combo = 0 and vsp = 0 {slowdown = true;}
+		if global.timesecond = 0 and global.timeminute = 0 and global.combo = 0 and vsp = 0 {slowdown = true; alarm[2] = room_speed*2;}
 		key_right = 1;
 		key_left = 0;
 		key_jump = mouse_check_button_released(mb_left);
@@ -224,14 +225,18 @@ if vsp >= 0 and alive = true and slowdown = false and (place_meeting(x,y+vsp,obj
 		objCRT.crtDistortion = approach(objCRT.crtDistortion,0.5,0.01);
 		screenshake(1,1);
 		vsp = 0;
-		puff = instance_create_depth(x,y,depth+10,obj_puff);
-		puff.direction = random_range(180,90);
-		puff.speed = random_range(4,8);
-		puff.gravity = 0.25;
-		puff.image_blend = c_yellow;
-		puff.fdspd = 0.02;
-		puff.sprite_index = spr_spark;
-		puff.ang = 1;
+		
+		if irandom(20) > 10
+		{
+			puff = instance_create_depth(x,y,depth+10,obj_puff);
+			puff.direction = random_range(180,90);
+			puff.speed = random_range(4,8);
+			puff.gravity = 0.25;
+			puff.image_blend = c_yellow;
+			puff.fdspd = 0.02;
+			puff.sprite_index = spr_spark;
+			puff.ang = 1;
+		}
 	}
 }
 else

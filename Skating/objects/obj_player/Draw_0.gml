@@ -60,14 +60,15 @@ if alive = true
 			draw_sprite_ext(spr_skateboard,0,x,y,xscale*zrotmod,boardy,boardang+grindmod,image_blend,1);
 			
 			
-			if mouse_check_button_pressed(mb_right) and grinding = false {
-			modifi = 60;
-			mousdist = point_distance(x,y,obj_mouse.x,obj_mouse.y);
-			if mousdist < modifi {trick = 1;}
-			else if mousdist < modifi*2 {trick = 2;}
-			else if mousdist < modifi*3 {trick = 3;}
-			else if mousdist < modifi*4 {trick = 4;}
-			else {trick = 5;}
+			if mouse_check_button_pressed(mb_right) and grinding = false 
+			{
+				modifi = 60;
+				mousdist = point_distance(x,y,obj_mouse.x,obj_mouse.y);
+				if mousdist < modifi {trick = 1;}
+				else if mousdist < modifi*2 {trick = 2;}
+				else if mousdist < modifi*3 {trick = 3;}
+				else if mousdist < modifi*4 {trick = 4;}
+				else {trick = 5;}
 			}
 		}
 		else
@@ -99,15 +100,32 @@ if popuptimer > 0
 	draw_set_halign(fa_left);
 }
 
+if keyboard_check_pressed(vk_escape) {ftr = instance_create_depth(x,y,-9999,obj_fadetoroom); ftr.rm=rm_init;}
+
+//WATER SOUNDS
+if global.valve = global.maxvalve
+{
+	hy = instance_nearest(x,y,obj_hydrant)
+	if distance_to_object(hy) < 200
+	{
+		if !audio_is_playing(snd_hydrantspray)
+		{
+			playsnd(snd_hydrantspray,1,random_range(0.9,1.1),true,0.35);	
+		}
+	}
+	else
+	{
+		audio_stop_sound(snd_hydrantspray);
+	}
+}
+
 if room = rm_tutorial
 {
-	if keyboard_check_pressed(vk_escape) {ftr = instance_create_depth(x,y,-9999,obj_fadetoroom); ftr.rm=obj_init;}
+	draw_sprite_ext(spr_tut,0,x+150,y-50,1,1,0,c_white,1);
 	draw_set_font(fnt_freddy);
 	draw_set_halign(fa_center);
-	//draw_set_valign(fa_middle);
 	outline_text_scale(string(tuttext),x,y+20,c_white,c_black,2,12,150,2,2,0);
 	draw_set_halign(fa_left);
-	//draw_set_valign(fa_top);
 }
 
 //draw_text(x,y,string(boardang));

@@ -1,6 +1,5 @@
 function balancecode(){
-	if (live_call()) return live_result;
-	if mouse_check_button_pressed(mb_right) or keyboard_check_pressed(vk_up) {indscale = 1.5; manualang += 16; playsnd(snd_adjust,1,0.9,false,0.1);}
+	if mouse_check_button_pressed(mb_right) or keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W")) {indscale = 1.5; manualang += 16; playsnd(snd_adjust,1,0.9,false,0.1);}
 	manualdif += 0.01;
 	manualintend = 0;
 	manrange = distance_to_point(manualang,manualintend);

@@ -2,6 +2,7 @@
 if live_enabled {if (live_call()) return live_result;}
 depth = -9999999;
 
+global.gottape = false;
 pitch = 1;
 songpitch = 1; 
 waited = false;
