@@ -19,7 +19,7 @@ else if global.song = mus_MistaJub_Dogboard {artistname = "MistaJub"; songname =
 else if global.song = mus_Post_Elvis_Rock_The_Third_Eye {artistname = "Post Elvis"; songname = "Rock The Third Eye"; artistspr = spr_postelvis;}
 else if global.song = mus_CarpetBakery_Radical_Ride {artistname = "CarpetBakery"; songname = "Radical Ride"; artistspr = spr_carpetbakery;}
 else if global.song = mus_DreamEnder_Number_3 {artistname = "DreamEnder"; songname = "Number 3"; artistspr = spr_dreamender;}
-else if global.song = mus_heyopc_full_circle {artistname = "heyopc, maxxjamez"; songname = "full circle"; artistspr = spr_heyopc;}
+else if global.song = mus_heyopc_full_circle {artistname = "heyopc, maxxjamez, RUNNER-BOY"; songname = "full circle"; artistspr = spr_heyopc;}
 else if global.song = mus_heyopc_edm_sac {artistname = "heyopc, maxxjamez"; songname = "JUMP"; artistspr = spr_heyopc;}
 else if global.song = mus_Crashtroid__Fat_Boy {artistname = "Crashtroid"; songname = "Fat Boy"; artistspr = spr_crashtroid;}
 else if global.song = mus_conundrym_short_n_sweet_revised {artistname = "Conundrym"; songname = "Short N Sweet"; artistspr = spr_conundrym;}
